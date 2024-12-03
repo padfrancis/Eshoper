@@ -40,6 +40,11 @@
             </form>
         </div>
     </section>
+    <footer class="footer">
+            <div class="container"></div>
+                <p>&copy; <?php echo date("Y"); ?> Eshoper. All rights reserved.</p>
+            </div>
+    </footer>
 </body>
 </html>
 

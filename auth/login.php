@@ -11,9 +11,9 @@
     <nav>
         <div class="container">
             <div class="logo">
-                <a href="/index.php" class="home">
-                    <img src="../assets/images/logo.png" alt="Eshoper Logo" class="logo-icon">
-                    <span>Eshoper</span>
+                <a href="../index.php">
+                    <img src="../assets/images/logo.png" alt="Eshoper Logo">
+                    <p>Eshoper</p>
                 </a>
             </div>
         </div>
@@ -24,12 +24,12 @@
         <div class="form-container">
             <h1>Welcome Back!</h1>
             <p>To continue shopping with us, please log in with your personal information</p>
-            <form action = "login.php" method = "POST">
+            <form action="login.php" method="POST"></form>
                 <div class="icon">
                     <img src="../assets/images/user.png" alt="User Icon">
                 </div>
-                <input name = "username" type="text" placeholder="Username" required>
-                <input name = "password" type="password" placeholder="Password" required>
+                <input name="username" type="text" placeholder="Username" required>
+                <input name="password" type="password" placeholder="Password" required>
                 <button type="submit">Log in</button>
                 <p class="login-link">
                     Don't have an account? <a href="signup.php">Signup here!</a>
@@ -37,6 +37,11 @@
             </form>
         </div>
     </section>
+    <footer class="footer">
+            <div class="container"></div>
+                <p>&copy; <?php echo date("Y"); ?> Eshoper. All rights reserved.</p>
+            </div>
+    </footer>
 </body>
 </html>
 <?php
