@@ -1,0 +1,122 @@
+/* General Reset */
+body, ul, li, a, button, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    background-color: #000;
+    margin: auto;
+  }
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    height: 80px;
+    margin-left:calc(12%);
+    max-width: 1100px;
+  }
+  .logo {
+    display: flex; 
+    align-items: center;
+    margin-right:40px;
+  }
+  .logo a {
+    display: flex; 
+    align-items: center;
+  }
+  .logo p{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    display:inline;
+    margin:0;
+  }
+
+  .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links a:hover {
+    color: #ccc;
+  }
+  
+  /* Dropdown Arrow Styling */
+  .arrow {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 8px 15px;
+    color: white;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #333;
+    border-radius: 4px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Search Button */
+  .search img {
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search img {
+    width: 45px;
+    height: 45px;
+  }
