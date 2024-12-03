@@ -11,7 +11,7 @@
     <nav>
         <div class="container">
             <div class="logo">
-                <a href="../index.php">
+                <a href="../index.html">
                     <img src="../assets/images/logo.png" alt="Eshoper Logo">
                     <p>Eshoper</p>
                 </a>

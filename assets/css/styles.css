@@ -19,7 +19,6 @@ body, ul, li, a, button, p {
     background-color: #000;
     color: #fff;
     padding: 20px 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     height: 80px;
     margin-left:calc(12%);
     max-width: 1100px;

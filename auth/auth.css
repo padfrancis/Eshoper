@@ -9,23 +9,27 @@ body, h1, p, form, input, button, a {
 }
 
 body {
-    background-color: #f9f9f9;
     color: #333;
 }
 
 /* Navbar */
 nav {
-    background-color: #1a1a1a;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    margin-left:calc(12%);
+    background-color: #000000;
 }
 
 nav .container {
     display: flex;
     align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    height: 80px;
+    margin-left:calc(12%);
+    max-width: 1100px;
+
 }
 
 nav .logo {
@@ -46,7 +50,7 @@ nav .logo-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 75.4vh;
     padding: 20px;
 }
 
@@ -130,7 +134,7 @@ button:hover {
 display: flex;
 justify-content: center;
 align-items: center;
-height: 80vh;
+height: 75.4vh;
 padding: 20px;
 }
 
@@ -143,23 +147,24 @@ padding: 20px;
     display: flex; 
     align-items: center;
     margin-right:40px;
-}
+  }
   .logo a {
     display: flex; 
     align-items: center;
-}
+  }
   .logo p{
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     display:inline;
     margin:0;
-}
+  }
 
   .logo img {
     height: 50px;
     margin-right: 10px;
-}
+  }
+  
 /* Footer */
 footer {
     background-color: #1a1a1a;
@@ -169,6 +174,7 @@ footer {
     position: absolute;
     width: 100%;
     bottom: 0;
+    height: 1px;
 }
 
 footer p {

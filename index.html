@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <title>Navbar</title>
+  <title>Eshoper</title>
 </head>
 <body>
   <div class = "container">
     <nav class="navbar">
         <div class="logo">
-            <a href="index.php">
+            <a href="index.html">
             <img src="assets/images/logo.png" alt="Eshoper Logo">
             <p>Eshoper</p>
             </a>
@@ -34,6 +34,13 @@
         <li><a href="#">Product Reviews</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
+        <li class="dropdown">
+          <a href="#">Account <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../web/auth/login.php">Login</a></li>
+            <li><a href="../web/auth/signup.php">Signup</a></li>
+          </ul>
+        </li>
         </ul>
         <div class="search">
         <a><img src = "assets/images/search.png" alt = "search button"></a>
