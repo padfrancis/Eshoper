@@ -13,24 +13,20 @@ body {
 }
 
 /* Navbar */
-nav {
-    background-color: #000000;
-}
-
 nav .container {
+    background-color: #000;
+  }
+  
+nav {
     display: flex;
     align-items: center;
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     background-color: #000;
     color: #fff;
-    padding: 20px 40px;
-    height: 80px;
-    margin-left:calc(12%);
-    max-width: 1100px;
-
-}
+    padding: 10px 20px;
+    position: relative;
+    z-index: 100;
+  }
 
 nav .logo {
     display: flex;
@@ -144,25 +140,24 @@ padding: 20px;
 }
 
 .logo {
-    display: flex; 
-    align-items: center;
-    margin-right:40px;
+    display: flex;
+    float:left;
   }
+  
   .logo a {
-    display: flex; 
+    display: flex;
     align-items: center;
   }
-  .logo p{
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    display:inline;
-    margin:0;
-  }
-
+  
   .logo img {
-    height: 50px;
+    height: 40px;
     margin-right: 10px;
+  }
+  
+  .logo p {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
   }
   
 /* Footer */

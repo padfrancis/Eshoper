@@ -9,27 +9,32 @@
 <body>
   <div class = "container">
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">
-            <img src="assets/images/logo.png" alt="Eshoper Logo">
-            <p>Eshoper</p>
-            </a>
-        </div>
-        <ul class="nav-links">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Eshoper Logo">
+          <p>Eshoper</p>
+        </a>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li class="dropdown">
-            <a href="#">Products <span class="arrow">▼</span></a>
-            <ul class="dropdown-menu">
+          <a href="#">Products <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
             <li><a href="#">Item 1</a></li>
             <li><a href="#">Item 2</a></li>
-            </ul>
+          </ul>
         </li>
         <li class="dropdown">
-            <a href="#">Support <span class="arrow">▼</span></a>
-            <ul class="dropdown-menu">
+          <a href="#">Support <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Privacy Policy</a></li>
-            </ul>
+          </ul>
         </li>
         <li><a href="#">Product Reviews</a></li>
         <li><a href="#">About Us</a></li>
@@ -41,11 +46,29 @@
             <li><a href="../web/auth/signup.php">Signup</a></li>
           </ul>
         </li>
-        </ul>
-        <div class="search">
-        <a><img src = "assets/images/search.png" alt = "search button"></a>
-        </div>
-    </nav>
+      </ul>
+      <div class="search">
+        <a><img src="assets/images/search.png" alt="search button"></a>
+      </div>
+    </nav>    
   </div>
+  <div class="carousel">
+    <button class="carousel-button prev">‹</button>
+    <div class="carousel-track-container">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <img src="../web/assets/images/user.png" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../web/assets/images/cert.png" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="../web/assets/images/image.png" alt="Slide 3">
+        </div>
+      </div>
+    </div>
+    <button class="carousel-button next">›</button>
+  </div>
+  <script src="../web/assets/js/script.js"></script>
 </body>
 </html>
