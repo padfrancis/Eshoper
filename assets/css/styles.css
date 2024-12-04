@@ -5,8 +5,8 @@ body, ul, li, a, button, p {
   list-style: none;
   text-decoration: none;
   font-family: Arial, sans-serif;
+  background-color: #000;
 }
-
 .container {
   background-color: #000;
   margin: auto;
@@ -55,15 +55,16 @@ body, ul, li, a, button, p {
   }
   
   .nav-links a {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     transition: color 0.3s;
     display: flex;
     align-items: center;
+    
   }
   
   .nav-links a:hover {
-    color: #ccc;
+    color: #a6a6a6;
   }
   
   /* Dropdown Arrow Styling */
@@ -78,7 +79,7 @@ body, ul, li, a, button, p {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #222;
+    background-color: #000000;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -88,16 +89,17 @@ body, ul, li, a, button, p {
   .dropdown-menu li a {
     display: block;
     padding: 8px 15px;
-    color: white;
+    color: rgb(255, 255, 255);
   }
   
   .dropdown-menu li a:hover {
-    background-color: #333;
+    background-color: #000000;
     border-radius: 4px;
   }
   
   .dropdown:hover .dropdown-menu {
     display: block;
+    background-color: #000000;
   }
   
   /* Search Button */
@@ -127,7 +129,6 @@ body, ul, li, a, button, p {
   width: 100%;
   height:44vh;
   margin: 0px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Carousel Track */
@@ -141,13 +142,9 @@ body, ul, li, a, button, p {
   transition: transform 0.5s ease-in-out;
 }
 
-/* Carousel Item */
-.carousel-item {
-  min-width: 100%;
-}
-
 .carousel-item img {
-  width: 100%;
+  width: 1550px;
+  height:344.5px;
   display: block;
 }
 
@@ -172,10 +169,16 @@ body, ul, li, a, button, p {
 
 .carousel-button.prev {
   left: 10px;
+  background-color: rgba(0, 0, 0, 0.0);
+  font-size: 80px;
+  color: #000;
 }
 
 .carousel-button.next {
   right: 10px;
+  font-size: 80px;
+  color:#000;
+  background-color: rgba(0, 0, 0, 0.0);
 }
 
 /* Hamburger Button */
@@ -199,13 +202,11 @@ body, ul, li, a, button, p {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-
 /* Show hamburger on smaller devices */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -236,4 +237,162 @@ body, ul, li, a, button, p {
   .dropdown-menu li a:hover {
     background-color: #222;
   }
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  height: 1px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.image-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  width: 100%;
+  height: 867px; 
+  margin: 0 auto; 
+  overflow: hidden; 
+}
+
+.img-container {
+  width: 100%; /* Match carousel width */
+  height: 100%; /* Match carousel height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  width: 100%; /* Make the image fill the container width */
+  height: 100%; /* Match the container's height */
+  object-fit: cover; /* Keep aspect ratio and fill the space */
+}
+
+
+.footer {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+  bottom: 0;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr);   /* 2 rows */
+  gap: 10px; /* Spacing between grid items */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Grid Items */
+.grid-item {
+  position: relative;
+  background-size: cover; 
+  background-position: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+.grid-item a{
+  text-decoration: none;
+  color:white;
+}
+.about p, a{
+display:inline-flex;
+}
+
+/* Header Section */
+.header {
+  background-color: #000000; /* Dark background */
+  color: #ffc107; /* Yellow text */
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  flex: 1;
+  margin-bottom:127.2px;
+}
+
+.content-box {
+  max-width: 900px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.content-box h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 15px;
+  background-color: rgb(255, 255, 255);
+}
+
+.content-box p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #000000;
+  text-align: justify;
+  background-color: rgb(255, 255, 255);
+}
+
+.content-box strong {
+  font-weight: bold;
+  color: #ffc107; /* Yellow color for emphasis */
 }

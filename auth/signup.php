@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eshoper - Sign Up</title>
+    <title>GenGrahamz - Sign Up</title>
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
@@ -11,9 +11,9 @@
     <nav>
         <div class="container">
         <div class="logo">
-            <a href="../index.html">
-                <img src="../assets/images/logo.png" alt="Eshoper Logo">
-                <p>Eshoper</p>
+            <a href="../index.php">
+                <img src="../assets/images/logo.png" alt="GenGrahamz Logo">
+                <p>GenGrahamz</p>
             </a>
         </div>
         </div>
@@ -42,7 +42,7 @@
     </section>
     <footer class="footer">
             <div class="container"></div>
-                <p>&copy; <?php echo date("Y"); ?> Eshoper. All rights reserved.</p>
+                <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>
             </div>
     </footer>
 </body>
