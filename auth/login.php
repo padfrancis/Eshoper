@@ -11,7 +11,7 @@
     <nav>
         <div class="container">
             <div class="logo">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img src="../assets/images/logo.png" alt="GenGrahamz Logo">
                     <p>GenGrahamz</p>
                 </a>
@@ -24,7 +24,7 @@
         <div class="form-container">
             <h1>Welcome Back!</h1>
             <p>To continue shopping with us, please log in with your personal information</p>
-            <form action="login.php" method="POST"></form>
+            <form action="login.php" method="POST">
                 <div class="icon">
                     <img src="../assets/images/user.png" alt="User Icon">
                 </div>

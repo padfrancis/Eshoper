@@ -1,0 +1,481 @@
+/* General Reset */
+body, ul, li, a, button, p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  background-color: #000;
+  margin: 0px auto;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  z-index: 100;
+}
+/* User info and logout on the right */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info .username {
+  font-size: 16px;
+  color: #fff;
+}
+
+.logout-form {
+  margin: 0; /* Inline form */
+}
+
+.logout-btn {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.03);
+}
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo on the left */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo p {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #000;
+}
+/* User Info in Navbar */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info .username {
+  font-size: 16px;
+  color: #fff;
+}
+
+.logout-btn {
+  padding: 8px 15px;
+  background-color: #b31818;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #e60e0e;
+  transform: scale(1.03);
+}
+
+/* Center the nav-links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-grow: 1;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  color: #a6a6a6;
+}
+  /* Dropdown Arrow Styling */
+  .arrow {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 8px 15px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #000000;
+    border-radius: 4px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #000000;
+  }
+  
+  /* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  /* Show hamburger on smaller devices */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 999;
+      transition: max-height 0.3s ease-in-out;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      padding: 10px 20px;
+      width: 100%;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      background-color: #111;
+    }
+  
+    .dropdown-menu li a:hover {
+      background-color: #222;
+    }
+  }
+
+.about p, a{
+display:inline-flex;
+background-color: #000000;
+}
+
+/* Header Section */
+.header {
+  background-color: #000000; /* Dark background */
+  color: #ffc107; /* Yellow text */
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #fff;
+}  
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Modal Adjustments */
+  #reviewModal .modal-content {
+    background-color: #ffffff;
+    color: white; 
+    border-radius: 10px; 
+    padding: 20px 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+    text-align: left; 
+  }
+  
+  #reviewModal h3 {
+    font-size: 1.5rem; 
+    color: #ffc107;
+    margin-bottom: 15px; 
+  }
+  
+  #reviewModal form {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+  }
+  
+  #reviewModal form label {
+    font-size: 1rem; 
+    color: #ddd; 
+  }
+  
+  #reviewModal form input,
+  #reviewModal form select,
+  #reviewModal form textarea {
+    width: 95%;
+    padding: 10px 15px; 
+    border: 1px solid #444; 
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    float:left;
+    display:flex;
+    justify-content: left;
+  }
+  #reviewModal form select{
+    width: 99%;
+  }
+  #reviewModal form textarea{
+    width: 94%;
+  }
+  #reviewModal form textarea {
+    resize: vertical; 
+    min-height: 100px; 
+  }
+  
+  #reviewModal form button {
+    padding: 12px 20px;
+    background-color: #ffc107; 
+    color: #000;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #reviewModal form button:hover {
+    background-color: #ff9800; 
+  }
+  
+  #reviewModal .modal-header {
+    border-bottom: none;
+    padding-bottom: 10px;
+  }
+  
+  #reviewModal .modal-body {
+    padding: 20px 0;
+  }
+  
+  .reviews {
+    padding: 40px 20px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+  }
+  
+  .reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffc107;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .reviews button {
+    padding: 12px 25px;
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .reviews button:hover {
+    background-color: #ff9800;
+    transform: scale(1.1); 
+  }
+  
+  .review {
+    background-color: #1c1c1c; 
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .review:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6); 
+  }
+  
+  .review h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffc107;;
+  }
+  
+  .review p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ddd; /* Softer white for text */
+  }
+  
+  .review p:first-of-type {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffc107; /* Highlight for star ratings */
+  }
+  .review h3, p{
+    background-color: #1c1c1c;
+  }
+  
+  /* Modal Adjustments */
+  #reviewModal .modal-content {
+    background-color: #2f2f2f;
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  height: 1px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  background-color: #000000;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.footer {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+  bottom: 0;
+}
+.about p, a{
+  display:inline-flex;
+  background-color: #000000;
+}

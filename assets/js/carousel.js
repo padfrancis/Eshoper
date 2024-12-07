@@ -28,25 +28,13 @@ nextButton.addEventListener("click", moveToNextSlide);
 prevButton.addEventListener("click", moveToPrevSlide);
 
 // Auto-play every 3 seconds
-let autoplay = setInterval(moveToNextSlide, 2000);
+let autoplay = setInterval(moveToNextSlide, 5000);
 
 // Pause autoplay on user interaction
 [nextButton, prevButton].forEach(button => {
   button.addEventListener("click", () => {
     clearInterval(autoplay);
-    autoplay = setInterval(moveToNextSlide, 2000); // Restart autoplay after interaction
+    autoplay = setInterval(moveToNextSlide, 5000); // Restart autoplay after interaction
   });
 });
 
-// Adjust slide width on window resize
-window.addEventListener("resize", () => {
-  slideWidth = slides[0].getBoundingClientRect().width;
-  updateSlidePosition();
-});
-
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
