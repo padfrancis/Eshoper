@@ -1,4 +1,4 @@
-var modal = document.getElementById("productModal");
+var modal = document.getElementById("reviewModal");
 var modalBtn = document.getElementById("addProductButton");
 var closeBtn = document.getElementById("closeModal");
 modalBtn.addEventListener("click", openModal);
@@ -21,3 +21,5 @@ window.addEventListener("click", outsideClick);
             }
         }
 
+
+        

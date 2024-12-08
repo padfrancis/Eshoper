@@ -1,5 +1,6 @@
 <?php
 session_start();
+include '../web/assets/config/conn.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,17 +78,35 @@ session_start();
           </div>
         </div>
       </header>
+      <?php if(isset($_SESSION['user'])): ?>
       <section class="contact">
         <div class="contact-box">
-          <form action="contact.php" method="post">
-            <label for="user_id"><span>* </span>User ID</label><br>
-            <input type="number" id="user_id" name="user_id" readonly><br>
-            <label for="product_id"><span>* </span>Product ID</label><br>
-            <select id="product_id" name="product_id" required>
+          <form action="../web/controller/add-order.php" method="post">
+            <label for="username"><span>* </span>Username</label><br>
+            <input type="text" id="username" name="username" value = "<?php 
+              if (isset($_SESSION['user']))
+              {
+                echo htmlspecialchars( $_SESSION['user']);
+              }
+            ?>" 
+            readonly>
+            <br>
+            <label for="product_name"><span>* </span>Product Name</label><br>
+            <select id="prod_name" name="prod_name" required>
               <option value="">Select a product</option>
-              <option value="1">Product 1</option>
-              <option value="2">Product 2</option>
-              <option value="3">Product 3</option>
+              <?php
+              try {
+                $stmt = $conn->prepare("SELECT prod_name FROM products");
+                $stmt->execute();
+                $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                  foreach ($products as $product) {
+                    echo "<option value='" . htmlspecialchars($product['prod_name']) . "'>" . htmlspecialchars($product['prod_name']) . "</option>";
+                  }
+                } catch (Exception $e) {
+                  echo "Error: " . $e->getMessage();
+                }
+              ?>
             </select><br>
             <label for="quantity"><span>* </span>Quantity</label><br>
             <input type="number" id="quantity" name="quantity" required><br>
@@ -95,7 +114,8 @@ session_start();
           </form>
         </div>
       </section>
-      <footer class="footer">
+      <?php endif ?>
+      <footer class="footer" style = "position:fixed;">
         <div class="container2"></div>
             <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>
         </div>

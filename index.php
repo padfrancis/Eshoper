@@ -93,26 +93,18 @@ if(!empty($_SESSION['user'])) {
   </div>
   <div class="image-section-container">
     <div class="img-container">
-      <img src="assets/images/sample.jpg" alt="User">
+      <img src="assets/images/graham6.png" alt="User">
     </div>
   </div>
   <section id = "products">
     <div class="grid-container">
       <div class="grid-item" style="background-image: url('assets/images/graham2.png');">
-        <a href = "">
-        </a>
       </div>
       <div class="grid-item" style="background-image: url('assets/images/graham3.png');">
-        <a href = "">
-        </a>
       </div>
       <div class="grid-item" style="background-image: url('assets/images/graham4.png');">
-        <a href = "">
-        </a>
       </div>
       <div class="grid-item" style="background-image: url('assets/images/graham5.png');">
-        <a href = "">
-        </a>
       </div>
     </div>
   </section>

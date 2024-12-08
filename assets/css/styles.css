@@ -344,7 +344,7 @@ footer a:hover {
   color: #fff;
   padding: 20px 0;
   font-size: 14px;
-  bottom: 0;
+
 }
 
 /* Grid Container */
@@ -387,7 +387,6 @@ footer a:hover {
 .about p, a{
 display:inline-flex;
 }
-
 /* Header Section */
 .header {
   background-color: #000000; /* Dark background */

@@ -20,21 +20,26 @@ CREATE TABLE IF NOT EXISTS products (
     stock_quantity INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+--@block
 CREATE TABLE IF NOT EXISTS order_reservations (
     reservation_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL REFERENCES users(username),
-    product_id INT NOT NULL REFERENCES products(product_id),
+    prod_name VARCHAR(50) NOT NULL REFERENCES products(prod_name),
     quantity INT NOT NULL,
     reservation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    status ENUM('reserved', 'cancelled') NOT NULL DEFAULT 'reserved'
+    status ENUM('reserved', 'cancelled', 'completed') NOT NULL DEFAULT 'reserved'
 );
 
+--@block
 CREATE TABLE IF NOT EXISTS reviews (
     review_id INT AUTO_INCREMENT PRIMARY KEY,
-    product_id INT NOT NULL REFERENCES products(product_id),
-    user_id INT NOT NULL REFERENCES users(user_id),
+    prod_name VARCHAR(50) NOT NULL REFERENCES products(prod_name),
+    username VaRCHAR(50) NOT NULL REFERENCES users(username),
     rating INT NOT NULL,
     comment TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+--@block
+-- Sample data for order_reservations
+INSERT INTO order_reservations (username, prod_name, quantity, status)
+VALUES ('john_doe', 'Mango Graham Bar', 2, 'reserved');

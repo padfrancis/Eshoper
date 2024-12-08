@@ -6,7 +6,9 @@ body, ul, li, a, button, p {
   text-decoration: none;
   font-family: Arial, sans-serif;
   background-color: #000000;
+  
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -360,14 +362,14 @@ background-color: #000000;
   #reviewModal .modal-body {
     padding: 20px 0;
   }
-  
+
   .reviews {
     padding: 40px 20px;
     background-color: #000000;
     color: white;
     text-align: center;
+
   }
-  
   .reviews h2 {
     font-size: 2rem;
     margin-bottom: 30px;
@@ -439,7 +441,6 @@ background-color: #000000;
     padding: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   }
-
 /* Footer */
 footer {
   background-color: #000000;
@@ -449,6 +450,8 @@ footer {
   width: 100%;
   bottom: 0;
   height: 1px;
+  position: fixed;
+  
 }
 
 footer p {

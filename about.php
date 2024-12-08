@@ -93,7 +93,7 @@ session_start();
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" style = "position:fixed;">
     <div class="container2"></div>
         <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>
     </div>

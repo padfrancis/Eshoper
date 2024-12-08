@@ -1,5 +1,16 @@
 <?php
 session_start();
+if(empty($_SESSION['user'])) {
+    header('location: ../index.php');
+}
+if($_SESSION['role'] == "user") 
+  {
+    if(!empty($_SESSION['user'])) 
+    {
+        header('location: ../index.php');
+        exit;
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +73,7 @@ session_start();
                 ?>
             </span>
             <?php if (isset($_SESSION['user'])): ?>
-            <form action="../web/controller/logout.php" method="post" class="logout-form" onsubmit="return confirm('<?php echo $_SESSION['user'];?>, are you sure you want to Logout?')">
+            <form action="logout.php" method="post" class="logout-form" onsubmit="return confirm('<?php echo $_SESSION['user'];?>, are you sure you want to Logout?')">
                 <button class = "logout-btn" type="submit" class="logout-btn">Logout</button>
             </form>
             <?php endif; ?>
@@ -112,7 +123,7 @@ session_start();
                     <td id="Email-<?= $Email ?>"><?php echo $Email ?></td>
                     <td id="Username-<?= $Role ?>"><?php echo $Role ?></td>
                     <td id="Created_at-<?= $Created_at ?>"><?php echo $Created_at ?></td>
-                    <td id="ID-<?= $ID ?>" style="display: inline-block;">
+                    <td id="ID-<?= $ID ?>">
                     <button type="button" class="btn1 editUser" data-id="<?= $ID ?>" data-username="<?= $Username ?>" data-firstname="<?= $Firstname ?>" data-lastname="<?= $Lastname ?>" data-email="<?= $Email ?>" data-role="<?= $Role ?>"><i class="fa-regular fa-pen-to-square"></i></button>
                     <form action="../controller/delete-user.php?id=<?php echo $row['user_id']; ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this user? <?php echo $row['username']; ?>')" style="display: inline-block;">
                         <input type="hidden" name="user_id" value="<?= $ID ?>" style="display: inline-block;">

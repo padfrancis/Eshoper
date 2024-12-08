@@ -68,84 +68,58 @@ session_start();
         </div>
         </nav>    
     </div>
-    <section class="products-section">
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search for products...">
-            <button id="searchButton">Search</button>
-        </div>
-        <button class = "addprod" id="addProductButton">Add Product</button>
-        <div class="product-grid">
-            <!--
-            <?php foreach ($_SESSION['products'] as $product): ?>
-                <div class="product-item" data-product="<?php echo $product['title']; ?>">
-                    <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['title']; ?>">
-                    <h3><?php echo $product['title']; ?></h3>
-                    <p><?php echo $product['price']; ?></p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-            <?php endforeach; ?>
-            -->
-            <div class="product-item" data-product="Sample Product">
-                <img src="/web/assets/images/graham.jpg" alt="Sample Product">
-                <h3>Sample Product</h3>
-                <p>$19.99</p>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-            <div class="product-item" data-product="Sample Product">
-                <img src="/web/assets/images/graham.jpg" alt="Sample Product">
-                <h3>Sample Product</h3>
-                <p>$19.99</p>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-            <div class="product-item" data-product="Sample Product">
-                <img src="/web/assets/images/graham.jpg" alt="Sample Product">
-                <h3>Sample Product</h3>
-                <p>$19.99</p>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-            <div class="product-item" data-product="Sample Product">
-                <img src="/web/assets/images/graham.jpg" alt="Sample Product">
-                <h3>Sample Product</h3>
-                <p>$19.99</p>
-                <a href="#" class="btn">Buy Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Add Product Modal -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <h2>Add a Product</h2>
-            <form action="product.php" method="post">
-                <label for="title">Product Title</label>
-                <input type="text" id="title" name="title" required><br>
-
-                <label for="description">Description</label>
-                <textarea id="description" name="description" required></textarea><br>
-
-                <label for="price">Price</label>
-                <input type="text" id="price" name="price" required><br>
-
-                <label for="image">Image URL</label>
-                <input type="file" accept ="image" id="image" name="image" required width = "40" height = "40"><br>
-
-                <label for="stock_quantity">Stock Quantity</label>
-                <input type="number" id="stock_quantity" name="stock_quantity" required><br>
-
-                <label for="category_id">Category ID</label>
-                <input type="number" id="category_id" name="category_id" required><br>
-
-                <button type="submit">Add Product</button>
-            </form>
+    <header class="header">
+        <div class="header-content">
+            <h1>Products</h1>
         </div>
     </div>
+  </header>
+    <section class="products-section">
+    <div class="product-grid">
+        <?php
+        include '../assets/config/conn.php';
+
+        $sql = "SELECT prod_name, description, price, image, stock_quantity FROM products";
+        $stmt = $conn->query($sql);
+
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $prod_name = htmlspecialchars($row['prod_name']);
+            $description = htmlspecialchars($row['description']);
+            $price = htmlspecialchars($row['price']);
+            $stock_quantity = htmlspecialchars($row['stock_quantity']);
+            $image = $row['image'];
+
+            if (!empty($image)) {
+                if (filter_var($image, FILTER_VALIDATE_URL)) {
+                    $imageTag = "<img src=\"$image\" alt=\"$prod_name\">";
+                } else {
+                    $imageTag = '<img src="data:image/jpeg;base64,' . base64_encode($image) . '" alt="' . $prod_name . '">';
+                }
+            } else {
+                $imageTag = '<img src="/path/to/default/image.jpg" alt="No Image">';
+            }
+
+            $productId = 'product-modal-' . md5($prod_name);
+
+            echo "
+            <div class=\"product-item\" onclick=\"openModal('$productId')\">
+                $imageTag
+                <h3>$prod_name</h3>
+                <p>$description</p>
+                <p>Price: ₱$price</p>
+                <p>Stock: $stock_quantity</p>
+            </div>";
+        }
+
+        $conn = null;
+        ?>
+    </div>
+</section>
+<script></script>
 
     <footer class="footer">
         <div class="container2"></div>
         <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>
     </footer>
-
-    <script src = "../products/product.js"></script>
 </body>
 </html>

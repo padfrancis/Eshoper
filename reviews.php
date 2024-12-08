@@ -1,5 +1,6 @@
 <?php
 session_start();
+include '../web/assets/config/conn.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,26 +80,62 @@ session_start();
   </header>
   <section class="reviews">
     <div class="container2">
-        <button id="addReviewButton">Add a Review</button>
-        <div class="review">
-            <h3>John Doe</h3>
-            <p>⭐⭐⭐⭐⭐</p>
-            <p>"Great product! Highly recommend it."</p>
-        </div>
+    <?php if(isset($_SESSION['user'])): ?>
+    <button id="addReviewButton">Add a Review</button>
+    <?php endif; ?>
+        <?php
+            try {
+              $stmt = $conn->prepare("SELECT prod_name, username, rating, comment FROM reviews");
+              $stmt->execute();
+              $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+              foreach ($reviews as $review) {
+                echo "<div class = 'review'>";
+                echo "<h3>" . htmlspecialchars($review['username']) . "</h3>";
+                echo "<h3>" . htmlspecialchars($review['prod_name']) . "</h3>";
+                echo "<p>" . str_repeat("⭐", htmlspecialchars($review['rating'])) . "</p>";
+                echo "<p>\"" . htmlspecialchars($review['comment']) . "\"</p>";
+                echo "</div>";
+              }
+            } catch (Exception $e) {
+              echo "Error: " . $e->getMessage();
+            }
+          ?>
+      </div>
     </div>
 </section>
-
 <!-- Review Modal -->
 <div id="reviewModal" class="modal">
     <div class="modal-content">
         <span class="close" id="closeModal">&times;</span>
         <h2>Add a Review</h2>
-        <form action="add_review.php" method="post">
-            <label for="product_id">Product ID</label>
-            <input type="number" id="product_id" name="product_id" placeholder="Enter Product ID" required><br>
+        <form action="../web/controller/add-review.php" method="post">
+          <label for="product_name"><span>* </span>Product Name</label>
+          <select id="prod_name" name="prod_name" required>
+          <option value="">Select a product</option>
+              <?php
+              try {
+                $stmt = $conn->prepare("SELECT prod_name FROM products");
+                $stmt->execute();
+                $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            <label for="user_id">User ID</label>
-            <input type="number" id="user_id" name="user_id" placeholder="Enter Your User ID" required><br>
+                  foreach ($products as $product) {
+                    echo "<option value='" . htmlspecialchars($product['prod_name']) . "'>" . htmlspecialchars($product['prod_name']) . "</option>";
+                  }
+                } catch (Exception $e) {
+                  echo "Error: " . $e->getMessage();
+                }
+              ?>
+            </select>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value = "<?php 
+              if (isset($_SESSION['user']))
+              {
+                echo htmlspecialchars( $_SESSION['user']);
+              }
+            ?>" 
+            readonly>
 
             <label for="rating">Rating</label>
             <select id="rating" name="rating" required>
@@ -107,7 +144,7 @@ session_start();
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </select><br>
+            </select>
 
             <label for="comment">Comment</label>
             <textarea id="comment" name="comment" placeholder="Write your review here" required></textarea><br>
