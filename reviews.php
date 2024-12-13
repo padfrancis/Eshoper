@@ -15,7 +15,7 @@ include '../web/assets/config/conn.php';
     <nav class="navbar">
       <div class="logo">
         <a href="index.php">
-          <img src="assets/images/logo.png" alt="GenGrahamz Logo">
+          <img src="assets/images/logo2.png" alt="GenGrahamz Logo">
           <p>GenGrahamz</p>
         </a>
       </div>

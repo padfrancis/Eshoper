@@ -15,7 +15,7 @@ include '../web/assets/config/conn.php';
         <nav class="navbar">
           <div class="logo">
             <a href="index.php">
-              <img src="assets/images/logo.png" alt="GenGrahamz Logo">
+              <img src="assets/images/logo2.png" alt="GenGrahamz Logo">
               <p>GenGrahamz</p>
             </a>
           </div>
@@ -32,7 +32,7 @@ include '../web/assets/config/conn.php';
             <li><a href="reviews.php">Customer Reviews</a></li>
             <li><a href="about.php">About Us</a></li>
             <li><a href="contact.php">Order Here</a></li>
-            <?php if (!isset($_SESSION['user'])): ?>
+        <?php if (!isset($_SESSION['user'])): ?>
           <li class="dropdown">
             <a href="#">Account <span class="arrow">▼</span></a>
             <ul class="dropdown-menu">
@@ -49,7 +49,7 @@ include '../web/assets/config/conn.php';
                   <li><a href="../web/products/view_products.php">View Products</a></li>
                 </ul>
             </li>
-          <?php endif; ?>
+        <?php endif; ?>
       </ul>
       <div class="user-info">
             <span class="username">
@@ -73,11 +73,13 @@ include '../web/assets/config/conn.php';
         <div class="header-content">
           <h1>Order Here</h1>
           <div class="about">
-            <a href="index.php"><p>Home</p></a> &gt; <a href="contact.php"><p>Order Here</p></a>
-            </div>
+            <a href="index.php"><p class = "abt">Home</p></a> &gt; <a href="contact.php"><p class = "abt">Order Here</p></a>
           </div>
         </div>
       </header>
+      <?php if(!isset($_SESSION['user'])): ?>
+        <h1 class = "rev">Please Create an Account/Login First</h1>
+      <?php endif ?>
       <?php if(isset($_SESSION['user'])): ?>
       <section class="contact">
         <div class="contact-box">
@@ -86,7 +88,7 @@ include '../web/assets/config/conn.php';
             <input type="text" id="username" name="username" value = "<?php 
               if (isset($_SESSION['user']))
               {
-                echo htmlspecialchars( $_SESSION['user']);
+                echo htmlspecialchars($_SESSION['user']);
               }
             ?>" 
             readonly>

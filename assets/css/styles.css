@@ -10,6 +10,11 @@ body, ul, li, a, button, p {
 body::-webkit-scrollbar {
   display: none;
 }
+body{
+  background-image: url('../images/bg.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+}
 .container {
   background-color: #000;
   margin: 0px auto;
@@ -131,7 +136,6 @@ body::-webkit-scrollbar {
 .nav-links a:hover {
   color: #a6a6a6;
 }
-
   
   /* Dropdown Arrow Styling */
   .arrow {
@@ -217,13 +221,13 @@ body::-webkit-scrollbar {
   left: 10px;
   background-color: rgba(0, 0, 0, 0.0);
   font-size: 80px;
-  color: #000;
+  color: #ffffff;
 }
 
 .carousel-button.next {
   right: 10px;
   font-size: 80px;
-  color:#000;
+  color:#ffffff;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
@@ -353,26 +357,31 @@ footer a:hover {
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   grid-template-rows: repeat(2, 1fr);   /* 2 rows */
   gap: 10px; /* Spacing between grid items */
-  height: 100vh; /* Full viewport height */
-  width: 100%; /* Full width */
-  overflow: hidden; /* Hide overflow */
+  height: auto; /* Adjust height to content */
+  width: 80%; /* Adjust width */
+  margin: 0 auto; /* Center the grid container */
+  padding: 20px; /* Add padding for spacing */
+
 }
 
 /* Grid Items */
 .grid-item {
   position: relative;
-  background-size:99.9% 100%; 
+  background-size: 100% 100%; /* Adjust this value to make the image smaller */
+  background-repeat: no-repeat;
   background-position: center; 
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem; /* Adjust font size */
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 200px; /* Adjust height */
+  width: 100%;
 }
 
 /* Hover Effect */
@@ -380,16 +389,22 @@ footer a:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
 }
-.grid-item a{
+
+.grid-item a {
   text-decoration: none;
-  color:white;
+  color: white;
 }
-.about p, a{
-display:inline-flex;
+
+.about p, a {
+  display: inline-flex;
+  background-color: transparent;
+}
+
+.abt {
+  background-color: transparent;
 }
 /* Header Section */
 .header {
-  background-color: #000000; /* Dark background */
   color: #ffc107; /* Yellow text */
   text-align: center;
   padding: 30px 20px;
@@ -403,9 +418,14 @@ display:inline-flex;
 .header p {
   font-size: 1rem;
   color: #fff;
-  background-color: #000000;
+  background-color: none;
 }
-
+.header a{
+  background-color: none;
+}
+.header-content p{
+  background-color: transparent;
+}
 /* Content Section */
 .content {
   display: flex;
@@ -416,28 +436,30 @@ display:inline-flex;
 }
 
 .content-box {
-  max-width: 900px;
+  max-width: 650px;
   text-align: center;
-  background-color: #fff;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255, 0.5);
+  background-color: transparent;
 }
 .content-box span{
   color:red;
 }
 .content-box h2 {
   font-size: 2rem;
-  color: #000000;
   margin-bottom: 15px;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
 }
 .content-box p {
   margin-bottom: 20px;
   font-size: 1rem;
-  color: #000000;
+  color: #ffffff;
   text-align: justify;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
 }
 
 .content-box strong {
@@ -455,35 +477,41 @@ display:inline-flex;
 }
 
 .contact-box {
-  min-width: 900px;
+  min-width: 650px;
   text-align: left;
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border:1px solid rgba(255,255,255, 0.5);
+  background-color: transparent;
 }
 .contact-box span{
-  color:red;
+  color:rgb(243, 61, 61);
+  font-size: larger;
+  font-weight: bolder;
 }
 .contact-box h2 {
   font-size: 2rem;
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 15px;
   background-color: rgb(255, 255, 255);
 }
 .contact-box p {
   margin-bottom: 20px;
   font-size: 1rem;
-  color: #000000;
+  color: #ffffff;
   text-align: justify;
   background-color: rgb(255, 255, 255);
 }
 
 .contact-box input[type=text], input[type=number], label, select{
-  width:65%;
-  margin-left:140px;
+  width:100%;
+  margin:0px;
   height:26px;
-  border-radius:15px;
+  border-radius:7px;
   margin-bottom:20px;
 }
 .contact-box input[type=text], input[type=number], select {
@@ -500,7 +528,7 @@ display:inline-flex;
 .contact-box input[type=submit] {
   border-radius:35px;
   float:right;
-  margin-right:170px;
+  margin-right:0px;
   margin-top:10px;
   background-color:black;
   color:white;
@@ -508,8 +536,33 @@ display:inline-flex;
   width:120px;
   cursor: pointer;
 }
+.contact-box select{
+  height:37px;
+}
+
+.contact-box label{
+  color:white;
+}
+
 .contact-box input[type=submit]:hover {
   background-color:rgb(255, 255, 255);
   color:black;
 }
 
+#products{
+  background-image: url('../images/bg.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+  background-size: cover; 
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rev{
+  color:white;
+  text-align: center;
+  margin-top:200px;
+}

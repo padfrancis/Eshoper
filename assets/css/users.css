@@ -7,6 +7,11 @@ body, ul, li, a, button, p, footer {
     font-family: Arial, sans-serif;
     background-color: #000000;
   }
+  body{
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
   h2 {
     color:white;
   }
@@ -387,6 +392,7 @@ footer a:hover {
     overflow-x: auto;
     margin: 0 auto;
     max-width: 100%;
+    
 }
 
 table {
@@ -396,6 +402,10 @@ table {
     font-size: 16px;
     text-align: center;
     min-width: 600px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255, 0.5);
+    background-color: transparent;
 }
 
 table th, table td {
@@ -408,11 +418,8 @@ table th {
     background-color: #333;
     color: #fff;
 }
-table tr:nth-child(even) {
-  background-color: #222;
-}
 table tr:hover {
-  background-color: #444;
+  background-color: #000000;
 }
 .btn1 {
     width: fit-content;
@@ -495,6 +502,9 @@ button.add:hover {
     border-radius: 10px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .modal-content h2{
+    color: #000;
   }
   
   .close {

@@ -26,7 +26,7 @@ if($_SESSION['role'] == "user")
         <nav class="navbar">
             <div class="logo">
                 <a href="../index.php">
-                    <img src="/web/assets/images/logo.png" alt="GenGrahamz Logo">
+                    <img src="/web/assets/images/logo2.png" alt="GenGrahamz Logo">
                     <p>GenGrahamz</p>
                 </a>
             </div>

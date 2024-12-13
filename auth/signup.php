@@ -12,7 +12,7 @@
         <div class="container">
         <div class="logo">
             <a href="../index.php">
-                <img src="../assets/images/logo.png" alt="GenGrahamz Logo">
+                <img src="../assets/images/logo2.png" alt="GenGrahamz Logo">
                 <p>GenGrahamz</p>
             </a>
         </div>
@@ -23,7 +23,7 @@
     <section class="signup-section">
         <div class="form-container">
             <h1>Hello, Shopper!</h1>
-            <p>Enter your personal details and start your shopping journey with us</p>
+            <p>Enter your personal details and<br> start your shopping journey with us</p>
             <form action = "signup.php" method = "POST">
                 <div class="icon">
                     <img src="../assets/images/user.png" alt="User Icon">

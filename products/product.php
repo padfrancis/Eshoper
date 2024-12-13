@@ -14,7 +14,7 @@ session_start();
         <nav class="navbar">
             <div class="logo">
                 <a href="../index.php">
-                    <img src="/web/assets/images/logo.png" alt="GenGrahamz Logo">
+                    <img src="/web/assets/images/logo2.png" alt="GenGrahamz Logo">
                     <p>GenGrahamz</p>
                 </a>
             </div>
@@ -71,6 +71,9 @@ session_start();
     <header class="header">
         <div class="header-content">
             <h1>Products</h1>
+            <div class="about">
+                <a href="index.php"><p>Home</p></a> &gt; <a href="reviews.php"><p>Customer Reviews</p></a>
+            </div>
         </div>
     </div>
   </header>

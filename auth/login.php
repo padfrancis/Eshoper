@@ -12,7 +12,7 @@
         <div class="container">
             <div class="logo">
                 <a href="../index.php">
-                    <img src="../assets/images/logo.png" alt="GenGrahamz Logo">
+                    <img src="../assets/images/logo2.png" alt="GenGrahamz Logo">
                     <p>GenGrahamz</p>
                 </a>
             </div>

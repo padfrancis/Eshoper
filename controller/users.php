@@ -26,7 +26,7 @@ if($_SESSION['role'] == "user")
     <nav class="navbar">
       <div class="logo">
         <a href="../index.php">
-          <img src="../assets/images/logo.png" alt="GenGrahamz Logo">
+          <img src="../assets/images/logo2.png" alt="GenGrahamz Logo">
           <p>GenGrahamz</p>
         </a>
       </div>
@@ -56,7 +56,7 @@ if($_SESSION['role'] == "user")
             <li class="dropdown" id ="manage">
               <a href="">Manage <span class="arrow">▼</span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="../web/controller/users.php">View Users</a></li>
+                  <li><a href="../controller/users.php">View Users</a></li>
                   <li><a href="../products/view_products.php">View Products</a></li>
                 </ul>
             </li>

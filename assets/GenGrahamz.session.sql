@@ -1,5 +1,4 @@
---@block
--- Users Table
+SET GLOBAL max_allowed_packet = 67108864;
 CREATE TABLE IF NOT EXISTS users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
@@ -20,7 +19,7 @@ CREATE TABLE IF NOT EXISTS products (
     stock_quantity INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
---@block
+
 CREATE TABLE IF NOT EXISTS order_reservations (
     reservation_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL REFERENCES users(username),
@@ -30,7 +29,6 @@ CREATE TABLE IF NOT EXISTS order_reservations (
     status ENUM('reserved', 'cancelled', 'completed') NOT NULL DEFAULT 'reserved'
 );
 
---@block
 CREATE TABLE IF NOT EXISTS reviews (
     review_id INT AUTO_INCREMENT PRIMARY KEY,
     prod_name VARCHAR(50) NOT NULL REFERENCES products(prod_name),
@@ -39,7 +37,3 @@ CREATE TABLE IF NOT EXISTS reviews (
     comment TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
---@block
--- Sample data for order_reservations
-INSERT INTO order_reservations (username, prod_name, quantity, status)
-VALUES ('john_doe', 'Mango Graham Bar', 2, 'reserved');

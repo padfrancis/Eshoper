@@ -8,12 +8,15 @@ body, ul, li, a, button, p {
   background-color: #000000;
   
 }
-
+body{
+  background-image: url('../images/bg.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+}
 body::-webkit-scrollbar {
   display: none;
 }
-.container {
-  background-color: #000;
+.container2 {
   margin: 0px auto;
 }
 
@@ -228,13 +231,12 @@ body::-webkit-scrollbar {
 
 .about p, a{
 display:inline-flex;
-background-color: #000000;
+background-color: transparent;
 }
 
 /* Header Section */
 .header {
-  background-color: #000000; /* Dark background */
-  color: #ffc107; /* Yellow text */
+  color: #ffc107;
   text-align: center;
   padding: 30px 20px;
 }
@@ -242,11 +244,13 @@ background-color: #000000;
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  background-color: transparent;
 }
 
 .header p {
   font-size: 1rem;
   color: #fff;
+  background-color: transparent;
 }  
 /* Modal Styles */
 .modal {
@@ -330,15 +334,15 @@ background-color: #000000;
   #reviewModal form select{
     width: 99%;
   }
-  #reviewModal form textarea{
+#reviewModal form textarea{
     width: 94%;
-  }
-  #reviewModal form textarea {
+}
+#reviewModal form textarea {
     resize: vertical; 
     min-height: 100px; 
-  }
+}
   
-  #reviewModal form button {
+#reviewModal form button {
     padding: 12px 20px;
     background-color: #ffc107; 
     color: #000;
@@ -348,37 +352,35 @@ background-color: #000000;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
   
-  #reviewModal form button:hover {
+#reviewModal form button:hover {
     background-color: #ff9800; 
-  }
+}
   
-  #reviewModal .modal-header {
+#reviewModal .modal-header {
     border-bottom: none;
     padding-bottom: 10px;
-  }
+}
   
-  #reviewModal .modal-body {
+#reviewModal .modal-body {
     padding: 20px 0;
-  }
+}
 
-  .reviews {
+.reviews {
     padding: 40px 20px;
-    background-color: #000000;
     color: white;
     text-align: center;
-
-  }
-  .reviews h2 {
+}
+.reviews h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     color: #ffc107;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-  }
+}
   
-  .reviews button {
+.reviews button {
     padding: 12px 25px;
     background-color: #ffc107;
     color: #000;
@@ -389,14 +391,14 @@ background-color: #000000;
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+}
   
-  .reviews button:hover {
+.reviews button:hover {
     background-color: #ff9800;
     transform: scale(1.1); 
-  }
+}
   
-  .review {
+.review {
     background-color: #1c1c1c; 
     padding: 20px;
     border-radius: 15px;
@@ -404,43 +406,42 @@ background-color: #000000;
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+}
   
-  .review:hover {
+.review:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6); 
-  }
+}
   
-  .review h3 {
+.review h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #ffc107;;
-  }
+    color: #ffffff;
+}
   
-  .review p {
+.review p {
     margin: 5px 0;
     font-size: 1rem;
     line-height: 1.5;
-    color: #ddd; /* Softer white for text */
-  }
+    color: #ddd;
+}
   
-  .review p:first-of-type {
+.review p:first-of-type {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #ffc107; /* Highlight for star ratings */
-  }
-  .review h3, p{
+    color: #ffc107;
+}
+.review h3, p{
     background-color: #1c1c1c;
-  }
-  
-  /* Modal Adjustments */
-  #reviewModal .modal-content {
+}
+
+#reviewModal .modal-content {
     background-color: #2f2f2f;
     color: white;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  }
+}
 /* Footer */
 footer {
   background-color: #000000;
@@ -450,7 +451,6 @@ footer {
   width: 100%;
   bottom: 0;
   height: 1px;
-  position: fixed;
   
 }
 
@@ -477,8 +477,4 @@ footer a:hover {
   padding: 20px 0;
   font-size: 14px;
   bottom: 0;
-}
-.about p, a{
-  display:inline-flex;
-  background-color: #000000;
 }

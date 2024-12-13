@@ -17,11 +17,11 @@ if(!empty($_SESSION['user'])) {
     <nav class="navbar">
       <div class="logo">
         <a href="index.php">
-          <img src="assets/images/logo.png" alt="GenGrahamz Logo">
+          <img src="assets/images/logo2.png" alt="GenGrahamz Logo">
           <p>GenGrahamz</p>
         </a>
       </div>
-      <button class="hamburger" aria-label="Toggle navigation">
+      <button class="hamburger">
         <span></span>
         <span></span>
         <span></span>
