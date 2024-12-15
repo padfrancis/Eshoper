@@ -10,6 +10,8 @@ body, ul, li, a, button, p {
 }
 body{
   background-image: url('../assets/images/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body::-webkit-scrollbar {
   display: none;

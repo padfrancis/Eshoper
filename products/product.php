@@ -46,6 +46,7 @@ session_start();
                 <ul class="dropdown-menu">
                   <li><a href="../controller/users.php">View Users</a></li>
                   <li><a href="view_products.php">View Products</a></li>
+                  <li><a href="../orders/orders.php">View Orders</a></li>
                 </ul>
             </li>
           <?php endif; ?>
@@ -72,7 +73,7 @@ session_start();
         <div class="header-content">
             <h1>Products</h1>
             <div class="about">
-                <a href="index.php"><p>Home</p></a> &gt; <a href="reviews.php"><p>Customer Reviews</p></a>
+                <a href="../index.php"><p>Home</p></a> &gt; <a href="product.php"><p>Products</p></a>
             </div>
         </div>
     </div>

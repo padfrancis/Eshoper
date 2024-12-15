@@ -58,6 +58,7 @@ if($_SESSION['role'] == "user")
                 <ul class="dropdown-menu">
                   <li><a href="../controller/users.php">View Users</a></li>
                   <li><a href="../products/view_products.php">View Products</a></li>
+                  <li><a href="../orders/orders.php">View Orders</a></li>
                 </ul>
             </li>
             <?php endif; ?>

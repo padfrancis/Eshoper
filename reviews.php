@@ -47,6 +47,7 @@ include '../web/assets/config/conn.php';
                 <ul class="dropdown-menu">
                   <li><a href="../web/controller/users.php">View Users</a></li>
                   <li><a href="../web/products/view_products.php">View Products</a></li>
+                  <li><a href="../web/orders/orders.php">View Orders</a></li>
                 </ul>
             </li>
           <?php endif; ?>
