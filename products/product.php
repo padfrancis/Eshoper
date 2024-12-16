@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="product.css">
-    <title>Products</title>
+    <title>Products Page</title>
 </head>
 <body>
     <div class="container">
@@ -79,48 +79,46 @@ session_start();
     </div>
   </header>
     <section class="products-section">
-    <div class="product-grid">
-        <?php
-        include '../assets/config/conn.php';
+        <div class="product-grid">
+            <?php
+            include '../assets/config/conn.php';
 
-        $sql = "SELECT prod_name, description, price, image, stock_quantity FROM products";
-        $stmt = $conn->query($sql);
+            $sql = "SELECT prod_name, description, price, image, stock_quantity FROM products";
+            $stmt = $conn->query($sql);
 
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $prod_name = htmlspecialchars($row['prod_name']);
-            $description = htmlspecialchars($row['description']);
-            $price = htmlspecialchars($row['price']);
-            $stock_quantity = htmlspecialchars($row['stock_quantity']);
-            $image = $row['image'];
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $prod_name = htmlspecialchars($row['prod_name']);
+                $description = htmlspecialchars($row['description']);
+                $price = htmlspecialchars($row['price']);
+                $stock_quantity = htmlspecialchars($row['stock_quantity']);
+                $image = $row['image'];
 
-            if (!empty($image)) {
-                if (filter_var($image, FILTER_VALIDATE_URL)) {
-                    $imageTag = "<img src=\"$image\" alt=\"$prod_name\">";
+                if (!empty($image)) {
+                    if (filter_var($image, FILTER_VALIDATE_URL)) {
+                        $imageTag = "<img src=\"$image\" alt=\"$prod_name\">";
+                    } else {
+                        $imageTag = '<img src="data:image/jpeg;base64,' . base64_encode($image) . '" alt="' . $prod_name . '">';
+                    }
                 } else {
-                    $imageTag = '<img src="data:image/jpeg;base64,' . base64_encode($image) . '" alt="' . $prod_name . '">';
+                    $imageTag = '<img src="/path/to/default/image.jpg" alt="No Image">';
                 }
-            } else {
-                $imageTag = '<img src="/path/to/default/image.jpg" alt="No Image">';
+
+                $productId = 'product-modal-' . md5($prod_name);
+
+                echo "
+                <div class=\"product-item\" onclick=\"openModal('$productId')\">
+                    $imageTag
+                    <h3>$prod_name</h3>
+                    <p>$description</p>
+                    <p>Price: ₱$price</p>
+                    <p>Stock: $stock_quantity</p>
+                </div>";
             }
 
-            $productId = 'product-modal-' . md5($prod_name);
-
-            echo "
-            <div class=\"product-item\" onclick=\"openModal('$productId')\">
-                $imageTag
-                <h3>$prod_name</h3>
-                <p>$description</p>
-                <p>Price: ₱$price</p>
-                <p>Stock: $stock_quantity</p>
-            </div>";
-        }
-
-        $conn = null;
-        ?>
-    </div>
-</section>
-<script></script>
-
+            $conn = null;
+            ?>
+        </div>
+    </section>
     <footer class="footer">
         <div class="container2"></div>
         <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>

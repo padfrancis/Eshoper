@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!empty($_SESSION['user'])) {
+  header('location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +13,6 @@
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav>
         <div class="container">
         <div class="logo">
@@ -18,8 +23,6 @@
         </div>
         </div>
     </nav>
-
-    <!-- Signup Form Section -->
     <section class="signup-section">
         <div class="form-container">
             <h1>Hello, Shopper!</h1>
@@ -35,15 +38,16 @@
                 <input name = "email" type="email" placeholder="Email" required>
                 <button type="submit">Sign Up</button>
                 <p class="login-link">
-                    Already have an account? <a href="login.php">Login here!</a>
+                    Already have an account? 
+                    <a href="login.php">Login here!</a>
                 </p>
             </form>
         </div>
     </section>
     <footer class="footer">
-            <div class="container"></div>
-                <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>
-            </div>
+        <div class="container"></div>
+            <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

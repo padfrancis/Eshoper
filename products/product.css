@@ -1,4 +1,4 @@
-/* General Reset */
+
 body, ul, li, a, button, p {
   margin: 0;
   padding: 0;
@@ -32,7 +32,6 @@ body::-webkit-scrollbar {
   z-index: 100;
 }
 
-/* User info and logout on the right */
 .user-info {
   display: flex;
   align-items: center;
@@ -45,7 +44,7 @@ body::-webkit-scrollbar {
 }
 
 .logout-form {
-  margin: 0; /* Inline form */
+  margin: 0;
 }
 
 .logout-btn {
@@ -69,7 +68,6 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
-/* Logo on the left */
 .logo {
   display: flex;
   align-items: center;
@@ -87,7 +85,6 @@ body::-webkit-scrollbar {
   background-color: #000;
 }
 
-/* Center the nav-links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -113,13 +110,11 @@ body::-webkit-scrollbar {
   color: #a6a6a6;
 }
 
-/* Dropdown Arrow Styling */
 .arrow {
   margin-left: 5px;
   font-size: 12px;
 }
 
-/* Dropdown Menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -148,7 +143,6 @@ body::-webkit-scrollbar {
   background-color: #000000;
 }
 
-/* Products Section */
 .products-section {
   padding: 20px;
   text-align: center;
@@ -238,7 +232,6 @@ body::-webkit-scrollbar {
   background: #555;
 }
 
-/* Modal Styling */
 .modal {
   display: none;
   position: fixed;
@@ -291,7 +284,7 @@ body::-webkit-scrollbar {
   text-decoration: none;
   cursor: pointer;
 }
-/* Review Modal Adjustments */
+
 #reviewModal .modal-content {
   background-color: #2f2f2f;
   color: white;
@@ -369,7 +362,6 @@ body::-webkit-scrollbar {
   padding: 20px 0;
 }
 
-/* Edit Modal Adjustments */
 #editModal .modal-content {
   background-color: #2f2f2f;
   color: white;
@@ -447,7 +439,6 @@ body::-webkit-scrollbar {
   padding: 20px 0;
 }
 
-/* Hamburger Button */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -469,7 +460,6 @@ body::-webkit-scrollbar {
   transition: all 0.3s ease;
 }
 
-/* Show hamburger on smaller devices */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -505,7 +495,7 @@ body::-webkit-scrollbar {
     background-color: #222;
   }
 }
-/* Footer */
+
 footer {
   background-color: #000000;
   color: #ffffff;
@@ -537,7 +527,6 @@ footer a:hover {
   float: left;
 }
 
-/* Add Product Button */
 .addprod {
   border-radius: 10px;
   width: 120px;
@@ -563,7 +552,6 @@ footer a:hover {
   transform: scale(1);
 }
 
-/* Edit Button */
 .btn1 {
   border-radius: 5px;
   background-color: #007bff;
@@ -585,7 +573,6 @@ footer a:hover {
   transform: scale(1);
 }
 
-/* Delete Button */
 .btn2 {
   border-radius: 5px;
   background-color: #dc3545;
@@ -613,7 +600,6 @@ footer a:hover {
   max-width: 100%;
 }
 
-/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -647,19 +633,16 @@ table tr:hover {
   text-align:justify;
 }
 
-/* Header Section */
 .header {
   background-color: #000000;
   color: #ffc107;
   text-align: center;
   background-color: transparent;
-
 }
 
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-
 }
 
 .header p {

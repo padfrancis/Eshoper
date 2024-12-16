@@ -142,9 +142,7 @@ if($_SESSION['role'] == "user")
                 </tbody>
             </table>
         </div>
-
     </section>
-        <!-- Add Product Modal -->
         <div id="reviewModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>

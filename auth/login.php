@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!empty($_SESSION['user'])) {
+  header('location: ../index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +13,6 @@
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav>
         <div class="container">
             <div class="logo">
@@ -18,8 +23,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- login Form Section -->
     <section class="login-section">
         <div class="form-container">
             <h1>Welcome Back!</h1>
@@ -38,9 +41,9 @@
         </div>
     </section>
     <footer class="footer">
-            <div class="container"></div>
-                <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>
-            </div>
+        <div class="container"></div>
+            <p>&copy; <?php echo date("Y"); ?> GenGrahamz. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

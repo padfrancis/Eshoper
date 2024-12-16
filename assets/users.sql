@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2024 at 07:31 AM
+-- Generation Time: Dec 16, 2024 at 01:08 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,8 +44,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `username`, `firstname`, `lastname`, `password`, `email`, `role`, `created_at`) VALUES
 (2, 'padfrancis', 'Padron', 'Francis', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'fbopadron@unp.edu.ph', 'admin', '2024-12-07 07:53:55'),
-(4, 'Jeth', 'Jethro', 'Taal', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'jeth@gmail.com', 'user', '2024-12-07 14:13:30'),
-(5, 'Poochi', 'Beverly', 'Padron', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'beverlyabrogar@gmail.com', 'user', '2024-12-07 16:12:45');
+(4, 'Jeth', 'Jethro', 'Taal', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4', 'jeth@gmail.com', 'user', '2024-12-07 14:13:30');
 
 --
 -- Indexes for dumped tables

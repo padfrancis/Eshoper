@@ -8,7 +8,7 @@ include '../web/assets/config/conn.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/reviews.css">
-  <title>GenGrahamz</title>
+  <title>Reviews Page</title>
 </head>
 <body>
 <div class = "container">
@@ -105,7 +105,6 @@ include '../web/assets/config/conn.php';
       </div>
     </div>
 </section>
-<!-- Review Modal -->
 <div id="reviewModal" class="modal">
     <div class="modal-content">
         <span class="close" id="closeModal">&times;</span>

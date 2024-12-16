@@ -1,5 +1,5 @@
-/* General Reset */
-body, ul, li, a, button, p {
+body, ul, li, a, button, p 
+{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -7,21 +7,24 @@ body, ul, li, a, button, p {
   font-family: Arial, sans-serif;
   background-color: #000000;
 }
-body::-webkit-scrollbar {
+body::-webkit-scrollbar 
+{
   display: none;
 }
-body{
+body
+{
   background-image: url('../images/bg.png');
   background-repeat: no-repeat;
   background-size:cover;
 }
-.container {
+.container 
+{
   background-color: #000;
   margin: 0px auto;
 }
 
-/* Navbar Styling */
-.navbar {
+.navbar 
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,23 +33,27 @@ body{
   padding: 10px 20px;
   z-index: 100;
 }
-/* User info and logout on the right */
-.user-info {
+
+.user-info 
+{
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.user-info .username {
+.user-info .username 
+{
   font-size: 16px;
   color: #fff;
 }
 
-.logout-form {
-  margin: 0; /* Inline form */
+.logout-form 
+{
+  margin: 0;
 }
 
-.logout-btn {
+.logout-btn 
+{
   padding: 8px 15px;
   background-color: #007bff;
   color: #fff;
@@ -57,45 +64,52 @@ body{
   transition: background-color 0.3s ease, transform 0.2s;
 }
 
-.logout-btn:hover {
+.logout-btn:hover 
+{
   background-color: #0056b3;
   transform: scale(1.03);
 }
-.logo a {
+.logo a 
+{
   display: flex;
   align-items: center;
 }
 
-/* Logo on the left */
-.logo {
+.logo 
+{
   display: flex;
   align-items: center;
 }
 
-.logo img {
+.logo img 
+{
   height: 40px;
   margin-right: 10px;
 }
 
-.logo p {
+.logo p 
+{
   color: white;
   font-size: 22px;
   font-weight: bold;
   background-color: #000;
 }
-/* User Info in Navbar */
-.user-info {
+
+.user-info 
+{
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.user-info .username {
+.user-info .username 
+{
   font-size: 16px;
   color: #fff;
 }
 
-.logout-btn {
+.logout-btn 
+{
   padding: 8px 15px;
   background-color: #b31818;
   color: #fff;
@@ -106,13 +120,14 @@ body{
   transition: background-color 0.3s ease, transform 0.2s;
 }
 
-.logout-btn:hover {
+.logout-btn:hover 
+{
   background-color: #e60e0e;
   transform: scale(1.03);
 }
 
-/* Center the nav-links */
-.nav-links {
+.nav-links 
+{
   display: flex;
   align-items: center;
   gap: 30px;
@@ -121,11 +136,13 @@ body{
   list-style: none;
 }
 
-.nav-links li {
+.nav-links li 
+{
   position: relative;
 }
 
-.nav-links a {
+.nav-links a 
+{
   color: rgb(255, 255, 255);
   font-size: 18px;
   transition: color 0.3s;
@@ -133,47 +150,51 @@ body{
   align-items: center;
 }
 
-.nav-links a:hover {
+.nav-links a:hover 
+{
   color: #a6a6a6;
 }
-  
-  /* Dropdown Arrow Styling */
-  .arrow {
-    margin-left: 5px;
-    font-size: 12px;
-  }
-  
-  /* Dropdown Menu */
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #000000;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    z-index: 1000;
-  }
-  
-  .dropdown-menu li a {
-    display: block;
-    padding: 8px 15px;
-    color: rgb(255, 255, 255);
-  }
-  
-  .dropdown-menu li a:hover {
-    background-color: #000000;
-    border-radius: 4px;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    background-color: #000000;
-  }
 
-/* Carousel Container */
-.carousel {
+.arrow 
+{
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.dropdown-menu 
+{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000000;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.dropdown-menu li a 
+{
+  display: block;
+  padding: 8px 15px;
+  color: rgb(255, 255, 255);
+}
+
+.dropdown-menu li a:hover 
+{
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu 
+{
+  display: block;
+  background-color: #000000;
+}
+
+.carousel 
+{
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -181,25 +202,28 @@ body{
   margin: 0px auto;
 }
 
-/* Carousel Track */
-.carousel-track-container {
+.carousel-track-container 
+{
   overflow: hidden;
   position: relative;
 }
 
-.carousel-track {
+.carousel-track 
+{
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item img {
+.carousel-item img 
+{
   width: auto;
   height:auto;
   display: block;
 }
 
-/* Carousel Buttons */
-.carousel-button {
+
+.carousel-button 
+{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -213,26 +237,30 @@ body{
   border-radius: 5px;
 }
 
-.carousel-button:hover {
+.carousel-button:hover 
+{
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.carousel-button.prev {
+.carousel-button.prev 
+{
   left: 10px;
   background-color: rgba(0, 0, 0, 0.0);
   font-size: 80px;
   color: #ffffff;
 }
 
-.carousel-button.next {
+.carousel-button.next 
+{
   right: 10px;
   font-size: 80px;
   color:#ffffff;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
-/* Hamburger Button */
-.hamburger {
+
+.hamburger 
+{
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -244,7 +272,8 @@ body{
   z-index: 1000;
 }
 
-.hamburger span {
+.hamburger span 
+{
   display: block;
   width: 100%;
   height: 3px;
@@ -252,12 +281,15 @@ body{
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-/* Show hamburger on smaller devices */
-@media (max-width: 768px) {
-  .hamburger {
+
+@media (max-width: 768px) 
+{
+  .hamburger 
+  {
     display: flex;
   }
-  .nav-links {
+  .nav-links 
+  {
     display: none;
     flex-direction: column;
     background-color: #000;
@@ -270,27 +302,31 @@ body{
     transition: max-height 0.3s ease-in-out;
   }
 
-  .nav-links.active {
+  .nav-links.active 
+  {
     display: flex;
   }
 
-  .nav-links li {
+  .nav-links li 
+  {
     padding: 10px 20px;
     width: 100%;
   }
 
-  .dropdown-menu {
+  .dropdown-menu 
+  {
     position: static;
     background-color: #111;
   }
 
-  .dropdown-menu li a:hover {
+  .dropdown-menu li a:hover 
+  {
     background-color: #222;
   }
 }
 
-/* Footer */
-footer {
+footer 
+{
   background-color: #000000;
   color: #ffffff;
   padding: 20px 0;
@@ -300,23 +336,27 @@ footer {
   height: 1px;
 }
 
-footer p {
+footer p 
+{
   margin: 0;
   font-size: 14px;
   background-color: #000000;
 }
 
-footer a {
+footer a 
+{
   color: #007bff;
   text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover 
+{
   text-decoration: underline;
   color: #0056b3;
 }
 
-.image-section-container {
+.image-section-container 
+{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,107 +367,120 @@ footer a:hover {
   overflow: hidden; 
 }
 
-.img-container {
-  width: 100%; /* Match carousel width */
-  height: 100%; /* Match carousel height */
+.img-container 
+{
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.img-container img {
-  width: 100%; /* Make the image fill the container width */
-  height: 100%; /* Match the container's height */
-  object-fit: cover; /* Keep aspect ratio and fill the space */
+.img-container img 
+{
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
 }
 
-
-.footer {
+.footer 
+{
   text-align: center;
   background-color: #000;
   color: #fff;
   padding: 20px 0;
   font-size: 14px;
-
 }
 
-/* Grid Container */
-.grid-container {
+.grid-container 
+{
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-template-rows: repeat(2, 1fr);   /* 2 rows */
-  gap: 10px; /* Spacing between grid items */
-  height: auto; /* Adjust height to content */
-  width: 80%; /* Adjust width */
-  margin: 0 auto; /* Center the grid container */
-  padding: 20px; /* Add padding for spacing */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);  
+  gap: 10px;
+  height: auto; 
+  width: 80%; 
+  margin: 0 auto; 
+  padding: 20px; 
 
 }
 
-/* Grid Items */
-.grid-item {
+
+.grid-item 
+{
   position: relative;
-  background-size: 100% 100%; /* Adjust this value to make the image smaller */
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center; 
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1.5rem; /* Adjust font size */
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 200px; /* Adjust height */
+  height: 200px;
   width: 100%;
 }
 
-/* Hover Effect */
-.grid-item:hover {
+.grid-item:hover 
+{
   transform: scale(1.05);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
 }
 
-.grid-item a {
+.grid-item a 
+{
   text-decoration: none;
   color: white;
 }
 
-.about p, a {
+.about p, a 
+{
   display: inline-flex;
   background-color: transparent;
 }
 
-.abt {
+.abt 
+{
   background-color: transparent;
 }
-/* Header Section */
-.header {
-  color: #ffc107; /* Yellow text */
+
+.header 
+{
+  color: #ffc107;
   text-align: center;
   padding: 30px 20px;
 }
 
-.header h1 {
+.header h1 
+{
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.header p {
+.header p 
+{
   font-size: 1rem;
   color: #fff;
   background-color: none;
 }
-.header a{
+
+.header a
+{
   background-color: none;
 }
-.header-content p{
+
+.header-content p
+{
   background-color: transparent;
 }
-/* Content Section */
-.content {
+
+.content 
+{
   display: flex;
   justify-content: center;
   padding: 40px 20px;
@@ -435,7 +488,8 @@ footer a:hover {
   margin-bottom:127.2px;
 }
 
-.content-box {
+.content-box 
+{
   max-width: 650px;
   text-align: center;
   padding: 20px;
@@ -446,15 +500,18 @@ footer a:hover {
   border:1px solid rgba(255,255,255, 0.5);
   background-color: transparent;
 }
-.content-box span{
+.content-box span
+{
   color:red;
 }
-.content-box h2 {
+.content-box h2 
+{
   font-size: 2rem;
   margin-bottom: 15px;
   background-color: transparent;
 }
-.content-box p {
+.content-box p 
+{
   margin-bottom: 20px;
   font-size: 1rem;
   color: #ffffff;
@@ -462,13 +519,14 @@ footer a:hover {
   background-color: transparent;
 }
 
-.content-box strong {
+.content-box strong 
+{
   font-weight: bold;
-  color: #ffc107; /* Yellow color for emphasis */
+  color: #ffc107;
 }
 
-/* contact Section */
-.contact {
+.contact 
+{
   display:flex;
   justify-content: center;
   padding: 40px 20px;
@@ -476,7 +534,8 @@ footer a:hover {
   margin-bottom:127.2px;
 }
 
-.contact-box {
+.contact-box 
+{
   min-width: 650px;
   text-align: left;
   background-color: #fff;
@@ -488,18 +547,21 @@ footer a:hover {
   border:1px solid rgba(255,255,255, 0.5);
   background-color: transparent;
 }
-.contact-box span{
+.contact-box span
+{
   color:rgb(243, 61, 61);
   font-size: larger;
   font-weight: bolder;
 }
-.contact-box h2 {
+.contact-box h2 
+{
   font-size: 2rem;
   color: #ffffff;
   margin-bottom: 15px;
   background-color: rgb(255, 255, 255);
 }
-.contact-box p {
+.contact-box p 
+{
   margin-bottom: 20px;
   font-size: 1rem;
   color: #ffffff;
@@ -507,25 +569,29 @@ footer a:hover {
   background-color: rgb(255, 255, 255);
 }
 
-.contact-box input[type=text], input[type=number], label, select{
+.contact-box input[type=text], input[type=number], label, select
+{
   width:100%;
   margin:0px;
   height:26px;
   border-radius:7px;
   margin-bottom:20px;
 }
-.contact-box input[type=text], input[type=number], select {
+.contact-box input[type=text], input[type=number], select 
+{
   border:1px solid grey;  
   background-color:#f5f5f5;
   color:grey;
 }
-.contact-box input[type=text]:focus, input[type=number]:focus, select:focus {
+.contact-box input[type=text]:focus, input[type=number]:focus, select:focus 
+{
   border:0px;
   background-color: white;
   outline: none;
   color:black;
 }
-.contact-box input[type=submit] {
+.contact-box input[type=submit] 
+{
   border-radius:35px;
   float:right;
   margin-right:0px;
@@ -536,20 +602,24 @@ footer a:hover {
   width:120px;
   cursor: pointer;
 }
-.contact-box select{
+.contact-box select
+{
   height:37px;
 }
 
-.contact-box label{
+.contact-box label
+{
   color:white;
 }
 
-.contact-box input[type=submit]:hover {
+.contact-box input[type=submit]:hover 
+{
   background-color:rgb(255, 255, 255);
   color:black;
 }
 
-#products{
+#products
+{
   background-image: url('../images/bg.png');
   background-repeat: no-repeat;
   width: 100%;
@@ -561,7 +631,8 @@ footer a:hover {
   align-items: center;
 }
 
-.rev{
+.rev
+{
   color:white;
   text-align: center;
   margin-top:200px;
